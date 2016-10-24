@@ -11,10 +11,11 @@ header and it is up to the switch to decide the VLAN to which it belongs.
 
 In this example, we activate tagging according to IEEE 802.1Q and assign the
 following:
-* First gigabit port: untagged traffic belongs to VLAN 131, tagged traffic is
-  dropped.
-* Second gigabit port: tagged traffic from VLANs 131 and 242 belongs to these
-  VLANs, tagged traffic from other VLANs and untagged traffic are dropped.
-* Third gigabit port: tagged traffic from VLANs 131 and 242 belongs to these
-  VLANs, tagged traffic from other VLANs is dropped, untagged traffic belongs to
-  VLAN 464 (and will not be tagged).
+* First gigabit port: untagged traffic belongs to VLAN `corp` (131), tagged
+  traffic is dropped.
+* Second gigabit port: tagged traffic from VLANs `corp` (131) and `outside`
+  (242) belongs to these VLANs, tagged traffic from other VLANs and untagged
+  traffic are dropped.
+* Third gigabit port: tagged traffic from VLANs `corp` (131) and `outside` (242)
+  belongs to these VLANs, tagged traffic from other VLANs is dropped, untagged
+  traffic belongs to VLAN `dmz` (464) and will not be tagged.
